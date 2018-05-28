@@ -3,22 +3,26 @@ from pynput import keyboard
 import time
 
 #  ======== settings ========
-delay = 1   # in seconds
 message = 'Hello World!'
+delay = 1   # in seconds
+resume_key = keyboard.Key.f1
+pause_key = keyboard.Key.f2
+exit_key = keyboard.Key.esc
+#  ==========================
+
 pause = True
 running = True
-#  ==========================
 
 def on_press(key):
     global running, pause
 
-    if key == keyboard.Key.f1:
+    if key == resume_key:
         pause = False
         print("[Resumed]")
-    elif key == keyboard.Key.f2:
+    elif key == pause_key:
         pause = True
         print("[Paused]")
-    elif key == keyboard.Key.esc:
+    elif key == exit_key:
         running = False
         print("[Exit]")
 
@@ -26,6 +30,7 @@ def display_controls():
     print("// Settings: ")
     print("\t message = " + message)
     print("\t delay = " + str(delay) + '\n')
+	
     print("// Controls:")
     print("\t F1 = Resume")
     print("\t F2 = Pause")
