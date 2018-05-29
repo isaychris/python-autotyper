@@ -1,6 +1,6 @@
 # python-autotyper
 A simple autotyper with controls using pyautogui. 
-![Image](https://i.imgur.com/oKkIdSN.png)
+![Image](https://i.imgur.com/M1lSBDc.png)
 
 'Hello World!' is the default message that will be autotyped. Default delay is 1 second.
 
